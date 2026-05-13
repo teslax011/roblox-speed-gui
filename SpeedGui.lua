@@ -136,29 +136,6 @@ JumpToggle.BackgroundColor3 = Color3.fromRGB(40,40,40)
 JumpToggle.BackgroundTransparency = 0.2
 Instance.new("UICorner", JumpToggle)
 
-UICorner.Parent = Frame
-‎
-‎TextButton.Parent = Frame
-‎TextButton.Size = UDim2.new(0,130,0,40)
-‎TextButton.Position = UDim2.new(0.09,0,0.25,0)
-‎TextButton.Text = "FPS 120 : OFF"
-‎TextButton.BackgroundColor3 = Color3.fromRGB(40,40,40)
-‎TextButton.TextColor3 = Color3.fromRGB(255,255,255)
-‎
-‎local enabled = false
-‎
-‎TextButton.MouseButton1Click:Connect(function()
-‎    enabled = not enabled
-‎
-‎    if enabled then
-‎        setfpscap(120)
-‎        TextButton.Text = "FPS 120 : ON"
-‎        TextButton.BackgroundColor3 = Color3.fromRGB(0,170,0)
-‎    else
-‎        setfpscap(60)
-‎        TextButton.Text = "FPS 120 : OFF"
-‎        TextButton.BackgroundColor3 = Color3.fromRGB(40,40,40)
-
 -- CHARACTER FUNCTION
 local function applySpeed()
 	local char = player.Character
