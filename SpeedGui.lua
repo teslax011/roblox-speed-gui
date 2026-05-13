@@ -2,44 +2,6 @@
 --// Support Android Executor
 --// GUI Transparan + Drag + Minimize + Close + Animasi
 
-local ScreenGui = Instance.new("ScreenGui")
-‎local Frame = Instance.new("Frame")
-‎local TextButton = Instance.new("TextButton")
-‎local UICorner = Instance.new("UICorner")
-‎
-‎ScreenGui.Parent = game.CoreGui
-‎ScreenGui.Name = "FPSGui"
-‎
-‎Frame.Parent = ScreenGui
-‎Frame.BackgroundColor3 = Color3.fromRGB(25,25,25)
-‎Frame.Position = UDim2.new(0.03,0,0.3,0)
-‎Frame.Size = UDim2.new(0,160,0,80)
-‎Frame.Active = true
-‎Frame.Draggable = true
-‎
-‎UICorner.Parent = Frame
-‎
-‎TextButton.Parent = Frame
-‎TextButton.Size = UDim2.new(0,130,0,40)
-‎TextButton.Position = UDim2.new(0.09,0,0.25,0)
-‎TextButton.Text = "FPS 120 : OFF"
-‎TextButton.BackgroundColor3 = Color3.fromRGB(40,40,40)
-‎TextButton.TextColor3 = Color3.fromRGB(255,255,255)
-‎
-‎local enabled = false
-‎
-‎TextButton.MouseButton1Click:Connect(function()
-‎    enabled = not enabled
-‎
-‎    if enabled then
-‎        setfpscap(120)
-‎        TextButton.Text = "FPS 120 : ON"
-‎        TextButton.BackgroundColor3 = Color3.fromRGB(0,170,0)
-‎    else
-‎        setfpscap(60)
-‎        TextButton.Text = "FPS 120 : OFF"
-‎        TextButton.BackgroundColor3 = Color3.fromRGB(40,40,40)
-
 local Players = game:GetService("Players")
 local UIS = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -173,6 +135,29 @@ JumpToggle.TextColor3 = Color3.new(1,1,1)
 JumpToggle.BackgroundColor3 = Color3.fromRGB(40,40,40)
 JumpToggle.BackgroundTransparency = 0.2
 Instance.new("UICorner", JumpToggle)
+
+UICorner.Parent = Frame
+‎
+‎TextButton.Parent = Frame
+‎TextButton.Size = UDim2.new(0,130,0,40)
+‎TextButton.Position = UDim2.new(0.09,0,0.25,0)
+‎TextButton.Text = "FPS 120 : OFF"
+‎TextButton.BackgroundColor3 = Color3.fromRGB(40,40,40)
+‎TextButton.TextColor3 = Color3.fromRGB(255,255,255)
+‎
+‎local enabled = false
+‎
+‎TextButton.MouseButton1Click:Connect(function()
+‎    enabled = not enabled
+‎
+‎    if enabled then
+‎        setfpscap(120)
+‎        TextButton.Text = "FPS 120 : ON"
+‎        TextButton.BackgroundColor3 = Color3.fromRGB(0,170,0)
+‎    else
+‎        setfpscap(60)
+‎        TextButton.Text = "FPS 120 : OFF"
+‎        TextButton.BackgroundColor3 = Color3.fromRGB(40,40,40)
 
 -- CHARACTER FUNCTION
 local function applySpeed()
